@@ -24,12 +24,43 @@ body {
 @keyframes scanline { from { transform: translateY(-100%); } to { transform: translateY(100%); } }
 @keyframes floatPulse { 0%,100% { transform: translateY(0); opacity:.75; } 50% { transform: translateY(-8px); opacity:1; } }
 @keyframes orbBurst { 0% { transform: scale(.4); opacity:.9; } 100% { transform: scale(2.6); opacity:0; } }
+@keyframes holoSpin { from { transform: rotateX(64deg) rotateZ(0deg); } to { transform: rotateX(64deg) rotateZ(360deg); } }
+@keyframes energySweep { 0% { transform: translateX(-120%); opacity: 0; } 35% { opacity: 1; } 100% { transform: translateX(120%); opacity: 0; } }
+
+.depth-stage {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+.hologram-ring {
+  animation: holoSpin 12s linear infinite;
+  transform-style: preserve-3d;
+}
+
+.energy-sweep::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(100deg, transparent 15%, rgba(0, 212, 255, .18), transparent 70%);
+  animation: energySweep 5s ease-in-out infinite;
+}
 
 .glass-panel {
   border: 1px solid rgba(255,255,255,.12);
   background: linear-gradient(135deg, rgba(18,18,26,.76), rgba(10,10,15,.5));
   box-shadow: 0 24px 80px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.08);
   backdrop-filter: blur(18px);
+  transform-style: preserve-3d;
+}
+
+.glass-panel-3d {
+  transform: rotateX(0deg) rotateY(0deg) translateZ(0);
+}
+
+.glass-panel-3d:hover {
+  transform: rotateX(3deg) rotateY(-4deg) translateY(-10px) translateZ(28px);
+  box-shadow: 0 34px 100px rgba(0, 212, 255, .14), 0 18px 70px rgba(123, 47, 190, .2);
 }
 
 .grid-mask {
