@@ -22,5 +22,9 @@
     "postcss": "^8.5.4",
     "autoprefixer": "^10.4.21",
     "@types/three": "^0.177.0"
+  },
+  "packageManager": "npm@10.9.2",
+  "engines": {
+    "node": ">=20.0.0"
   }
 }

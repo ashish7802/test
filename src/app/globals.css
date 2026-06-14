@@ -38,3 +38,18 @@ body {
   background-size: 52px 52px;
   mask-image: radial-gradient(circle at center, black, transparent 75%);
 }
+
+.hero-mesh-fallback {
+  background:
+    radial-gradient(circle at 50% 45%, rgba(0, 212, 255, .18), transparent 42%),
+    linear-gradient(135deg, rgba(123, 47, 190, .12), rgba(255, 51, 102, .08));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}

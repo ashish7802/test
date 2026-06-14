@@ -50,7 +50,7 @@ export default function HeroMesh() {
         powerPreference: "high-performance",
       });
     } catch {
-      mount.classList.add("bg-[radial-gradient(circle_at_center,rgba(0,212,255,.18),transparent_45%)]");
+      mount.classList.add("hero-mesh-fallback");
       return;
     }
 

@@ -71,7 +71,7 @@ export default function ContactForm() {
             placeholder="Tell me about the mission."
           />
         </label>
-        <button className="rounded-full bg-gradient-to-r from-[#00D4FF] via-[#7B2FBE] to-[#FF3366] px-6 py-4 font-black text-white shadow-[0_0_35px_rgba(0,212,255,.25)] transition hover:scale-[1.02]">
+        <button type="submit" className="rounded-full bg-gradient-to-r from-[#00D4FF] via-[#7B2FBE] to-[#FF3366] px-6 py-4 font-black text-white shadow-[0_0_35px_rgba(0,212,255,.25)] transition hover:scale-[1.02]">
           Transmit Brief
         </button>
         {sent ? (
