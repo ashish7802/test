@@ -40,9 +40,9 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-4 md:grid-cols-4">
+        <div className="depth-stage mt-12 grid gap-4 md:grid-cols-4">
           {metrics.map(([label, value, detail]) => (
-            <div key={label} className="glass-panel rounded-3xl p-5">
+            <div key={label} className="glass-panel glass-panel-3d rounded-3xl p-5 transition duration-500">
               <p className="text-xs uppercase tracking-[0.25em] text-slate-400">{label}</p>
               <p className="mt-3 text-2xl font-black text-white">{value}</p>
               <p className="mt-2 text-sm text-[#00D4FF]">{detail}</p>
@@ -55,9 +55,9 @@ export default function Home() {
         <p className="text-sm font-bold uppercase tracking-[0.35em] text-[#00D4FF]">Professional Timeline</p>
         <h2 className="mt-4 text-4xl font-black">TaskMinions — Data Systems & Automation Analyst</h2>
         <p className="mt-2 font-bold text-[#FF3366]">Present</p>
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
+        <div className="depth-stage mt-8 grid gap-4 md:grid-cols-3">
           {timelineBullets.map((item) => (
-            <div key={item} className="glass-panel rounded-3xl p-6 text-slate-300">
+            <div key={item} className="glass-panel glass-panel-3d rounded-3xl p-6 text-slate-300 transition duration-500">
               {item}
             </div>
           ))}
