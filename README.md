@@ -103,8 +103,4 @@ Before deployment, verify:
 - **Location:** Lucknow, UP, India
 - **Status:** Available for Immediate Deployment
 - **Delivery:** 6+ major applications deployed
-- **Open Source:** 350+ GitHub stars
-
-## 📌 Notes
-
-This portfolio intentionally avoids custom cursor effects and external image dependencies. Motion is focused on ambient background physics, scroll parallax, and subtle interface feedback for a cleaner, more professional recruiter-facing presentation.
+- **Open Source:** GitHub reops
